@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Local Storage</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="stylesheet" href="estilosssss.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                         <a href="index.html">Inicio: </a>
+                        <a href="index1.html">Pag 1</a>
+                        <a href="PAG2/index2.html">Pag 2</a>
+                         <a href="index3.html">Pag 3</a>
+                       <a href="index4.html">Pag 4</a>
+                       <a href="index5.html">LocalStorage</a>
+                      <a href="Curriculum.pdf">Curriculum</a>
+                      <a href="PaginaRealizada.html">Pagina Estatica</a>
+            </nav>
+        </div>
+    </header>
+<table>
+        <tr>
+            <td>
+<center>
+                <form autocomplete="off" onsubmit="onFormSubmit()">
+                    <div>
+                        <label for="productCode">Codigo del producto</label>
+                        <input type="text" name="productCode" id="productCode">
+                    </div>
+                    <div>
+                        <label for="product">Nombre del Producto</label>
+                        <input type="text" name="product" id="product">
+                    </div>
+<div>
+                        <label for="product">Direccion del Producto</label>
+                        <input type="text" name="product" id="product">
+                    </div>
+<div>
+                        <label for="product">Num del Producto</label>
+                        <input type="text" name="product" id="product">
+                    </div>
+                    <div>
+                        <label for="description"> Descriocion</label>
+                        <input type="text" name="Description" id="Description">
+                    </div>
+                    <div>
+                        <label for="qty">Qty</label>
+                        <input type="number" name="qty" id="qty">
+                    </div>
+                    <div>
+                        <label for="perPrice">Precio</label>
+                        <input type="number" name="perPrice" id="perPrice">
+                    </div>
+
+                    <div class="form_action--button">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
+
+                <td>
+                    <table class="list" id="storeList">
+                        <thead>
+                            <tr>
+                                <th>Codigo del producto</th>
+                                <th>Nombre del producto</th>
+                                <th>Direccion del producto</th>
+                                 <th>Num del producto</th>
+                                <th>Descripcion</th>
+                                <th>Qty</th>
+                                <th>Precio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </td>
+            </td>
+        </tr>
+    </table>
+    <script type="text/javascript" src="./script.js"></script>
+</center>
+</body>
+</html>
