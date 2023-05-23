@@ -1,218 +1,223 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
-
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Source Sans Pro', sans-serif;
+body{
+  font: 15px Arial, Helvetica,sans-serif;
+  padding:0;
+  margin:0;
+  background-color:#f4f4f4;
 }
 
+/* Estilos globales */
+.contenedor{
+  width:80%;
+  margin:auto;
+  overflow:hidden;
+}
+
+ul{
+  margin:0;
+  padding:0;
+}
+
+.boton1{
+  height:38px;
+  background:#e8491d;
+  border:0;
+  padding-left: 20px;
+  padding-right:20px;
+  color:#ffffff;
+}
+
+.oscuro{
+  padding:15px;
+  background:#35424a;
+  color:#ffffff;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+/* Encabezado **/
 header{
-    width: 100%;
-    height: 80px;
-    margin-top: 40px;
-    position: fixed;
-    z-index: 1;
+  background:#24282b;
+  color:#ffffff;
+  padding-top:30px;
+  min-height:70px;
+  border-bottom:#1293d4 5px solid;
 }
 
-.container__menu{
-    max-width: 1200px;
-    height: 100%;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
+header a{
+  color:#ffffff;
+  text-decoration:none;
+  text-transform: uppercase;
+  font-size:16px;
 }
 
-.logo{
-    height: 100%;
-    display: flex;
-    align-items: center;
+header li{
+  float:left;
+  display:inline;
+  padding: 0 20px 0 20px;
 }
 
-.logo img{
-    width: 80px;
-
+header #marca{
+  float:left;
 }
 
-.menu{
-    display: flex;
-    align-items: center;
+header #marca h1{
+  margin:0;
 }
 
-.menu ul{
-    display: flex;
+header nav{
+  float:right;
+  margin-top:10px;
 }
 
-.menu ul li{
-    list-style: none;
-    margin-left: 36px;
+header .resaltado, header .actual a{
+  color:#1293d4;
+  font-weight:bold;
 }
 
-.menu ul li a{
-    text-decoration: none;
-    font-size: 16px;
-    color: #fff;
-    text-transform: uppercase;
+header a:hover{
+  color:#cccccc;
+  font-weight:bold;
 }
 
-#selected{
-    background: #D50000;
-    padding: 10px 40px;
-    border-radius: 50px;
+/* Cabecera con imagen */
+#cabecera{
+  min-height:400px;
+  background:url('../img/cabecera.jpg') no-repeat 0 -400px;
+  text-align:center;
+  color:#ffffff;
 }
 
-.menu nav img{
-    display: none;
+#cabecera h1{
+  margin-top:100px;
+  font-size:55px;
+  margin-bottom:10px;
 }
 
-.menu #btn_menu{
-    display: none;
+#cabecera p{
+  font-size:20px;
+}
+
+/* Formulario */
+#boletin{
+  padding:15px;
+  color:#ffffff;
+  background:#24282b;
+}
+
+#boletin h1{
+  float:left;
+}
+
+#boletin form {
+  float:right;
+  margin-top:15px;
+}
+
+#boletin input[type="email"]{
+  padding:4px;
+  height:25px;
+  width:250px;
+}
+
+/* Cajas */
+#cajas{
+  margin-top:20px;
+}
+
+#cajas .caja{
+  float:left;
+  text-align: center;
+  width:30%;
+  padding:10px;
+}
+
+#cajas .caja img{
+  width:90px;
+}
+
+/* Lateral */
+aside#lateral{
+  float:right;
+  width:30%;
+  margin-top:10px;
+}
+
+/* Main-col */
+article#main-col{
+  float:left;
+  width:65%;
+}
+
+/* Servicios */
+ul#servicios li{
+  list-style: none;
+  padding:20px;
+  border: #cccccc solid 1px;
+  margin-bottom:5px;
+  background:#e6e6e6;
+}
+
+footer{
+  padding:20px;
+  margin-top:20px;
+  color:#ffffff;
+  background-color:#1293d4;
+  text-align: center;
 }
 
 
-/*COVER*/
+/* Estilos para el formulario de contacto */
 
-
-.container__cover{
-    width: 100%;
-    height: 800px;
-    background-image: url(../img/Background-page.svg);
-    background-position: left;
-    background-repeat: no-repeat;
+input, textarea{
+  width: 100%;
+  height: 35px;
+  border: 1px solid gray; 
+  margin-bottom: 5px;
 }
 
-.cover{
-    max-width: 1200px;
-    height: 100%;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+textarea{
+  height: 120px;
 }
 
-.container__cover .text{
-    max-width: 400px;
+input[type='submit']{
+  background-color: #e8491d;
+  color: #fff;  
 }
 
-.container__cover .text h1{
-    font-size: 36px;
-    font-weight: 600;
-}
+/* Media Queries */
+@media(max-width: 768px){
+  header #marca,
+  header nav,
+  header nav li,
+  #boletin h1,
+  #boletin form,
+  #cajas .caja,
+  article#main-col,
+  aside#lateral{
+    float:none;
+    text-align:center;
+    width:100%;
+  }
 
-.container__cover .text p{
-    font-size: 18px;
-    margin-top: 40px;
-}
+  header{
+    padding-bottom:20px;
+  }
 
-.container__cover .text input{
-    padding: 18px 80px;
-    border: none;
-    font-size: 16px;
-    border-radius: 50px;
-    margin-top: 40px;
-    background: linear-gradient(to right, #fab2b2, #D50000);
-    color: #fff;
-    cursor: pointer;
-    box-shadow: 1px 1px 30px -12px #D50000;
-    transition: all 300ms;
-}
+  #boletin h1{
+    margin-top:40px;
+  }
 
-.container__cover .text input:hover{
-    box-shadow: 1px 1px 30px -6px #D50000;
-}
+  #boletin button{
+    display:block;
+    width:100%;
+  }
 
+  #boletin form input[type="email"]{
+    width:100%;
+    margin-bottom:5px;
+  }
 
-.container__cover .svg img{
-    width: 400px;
-    animation: move-vector 4s linear infinite;
-}
-
-@keyframes move-vector {
-    0%{
-        transform: translateY(15px);
-    }50%{
-        transform: translateY(0px);
-    }100%{
-        transform: translateY(15px);
-    }
-}
-
-
-/*Haciendo la página Responsive*/
-
-@media screen and (max-width:1200px){
-
-    header{
-        padding: 40px;
-    }
-
-}
-
-@media screen and (max-width: 720px){
-
-    .menu nav{
-        position: fixed;
-        top: 0;
-        right: -250px;
-        background: white;
-        width: 250px;
-        height: 100vh;
-        padding: 40px;
-        z-index: 1;
-        transition: all 300ms;
-    }
-
-    .menu ul{
-        flex-direction: column;
-        margin-top: 40px;
-    }
-
-    .menu ul li{
-        margin-top: 30px;
-        margin-left: 0;
-    }
-
-    .menu ul li a{
-        color: #bebebe;
-    }
-
-    #selected{
-        background: none;
-        padding: 0px;
-        border-radius: none;
-        color: #F6615D;
-    }
-
-    .menu nav img{
-        display: block;
-        width: 60px;
-    }
-
-    #back_menu{
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100vh;
-        background: rgba(0,0,0,0.5);
-        display: none;
-    }
-
-    .menu #btn_menu{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 50px;
-        height: 50px;
-        background: rgba(255, 255, 255, 0.1);
-        font-size: 24px;
-        border-radius: 50px;
-        cursor: pointer;
-        transition: all 300ms;
-    }
-
-    .menu #btn_menu:hover{
-        background: rgba(255, 255, 255, 0.2);
-    }
+  input, textarea{
+    width: 98%; 
+  }
 }
